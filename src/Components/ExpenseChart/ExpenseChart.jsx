@@ -38,6 +38,7 @@ const ExpenseChart = ({ expenses }) => {
     return (
         <div className={`${styles.chartbg}`}>
             <div className={`${styles.chartbg2}`}>
+                <h2 className='text-white text-center pt-4'>Expense Distribution</h2>
                 <PieChart width={450} height={450}>
                     <Pie data={categoryTotals}  dataKey="value" label={renderCustomizedLabel} labelLine={false} >
                         {categoryTotals.map((entry, index) => (

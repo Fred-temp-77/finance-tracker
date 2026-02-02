@@ -25,7 +25,7 @@ const Budget = ({ expenses = [] }) => {
                     <h2 className='text-[40px] text-center'>Budget Overview</h2>
                     {budgetStatus.map((item) => (
                     <div key={item.category}>
-                        <h4>{item.category}</h4>
+                        <h4 className='text-[20px] text-[#9CFFF5] '>{item.category}</h4>
 
                         <p>
                         ₦{item.spent} / ₦{item.limit}

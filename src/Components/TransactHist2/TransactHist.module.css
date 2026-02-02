@@ -12,4 +12,16 @@
 }
 .card2 > h3 {
     margin-top: 10px;
+    font-family: qumpellkano12regular;
+}
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+    font-family: 'qumpellkano12regular';
+    border-top: 1px solid white;
+    font-size: 11px;
 }

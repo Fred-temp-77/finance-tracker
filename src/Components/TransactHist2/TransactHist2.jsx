@@ -11,6 +11,7 @@ const TransactHist2 = ({ expenses }) => {
           <div>
             <ExpenseList expenses={expenses} />
           </div>
+          <p className={styles.text}>Click on Expenses at the top of the screen to create a new transaction</p>
         </div>
     </div>
   )
