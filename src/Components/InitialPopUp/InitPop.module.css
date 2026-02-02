@@ -13,6 +13,9 @@
     justify-items: center;
     margin-top: 50px;
 }
+.container > h2 {
+    font-family: 'qumpellkano12regular';
+}
 .name {
     grid-area: name;
 }

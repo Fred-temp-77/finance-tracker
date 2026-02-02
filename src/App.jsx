@@ -5,7 +5,7 @@ import InitPop from './Components/InitialPopUp/InitPop.jsx'
 function App() {
 
   return (
-    <div className='flex justify-center items-center mt-[30%] '>
+    <div className='flex justify-center items-center pt-[100px]'>
       <InitPop />
     </div>
   )
