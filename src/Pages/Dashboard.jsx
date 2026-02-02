@@ -22,7 +22,7 @@ const Dashboard = () => {
     <div className='w-[100%] '>
         {/* Header */}
         <div className={styles.header2}>
-            <Link to="/" className={styles.title}>Finance Tracker</Link>
+            <Link to="/home" className={styles.title}>Finance Tracker</Link>
             <div className={styles.head}>
                 <Header />
             </div>

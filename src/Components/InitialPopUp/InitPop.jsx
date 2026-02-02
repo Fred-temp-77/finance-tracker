@@ -13,7 +13,7 @@ const InitPop = () => {
         localStorage.setItem("name", name);
         localStorage.setItem("income", income);
         // console.log("Saved:", { name, income });
-        navigate('/finance-tracker');
+        navigate('/home');
     };
 
 

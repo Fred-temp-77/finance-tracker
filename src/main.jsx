@@ -1,20 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createHashRouter } from 'react-router-dom'
 import './index.css'
 import Dashboard from './Pages/Dashboard.jsx'
 import App from './App.jsx'
 
 const NotFound = () => <h1>Page Not Found</h1>
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <NotFound />,
   },
   {
-    path: '/finance-tracker',
+    path: '/home',
     element: <Dashboard />,
   }
 ])
