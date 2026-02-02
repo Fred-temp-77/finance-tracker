@@ -1,0 +1,64 @@
+.container {
+    background: linear-gradient(90deg, #294A71, #14202E);
+    padding: 10px;
+    width: 500px;
+    border: #1F76DE 2px solid;
+    border-radius: 30px;
+}
+.container2 {
+    display: grid;
+    grid-template-areas: 
+        "name income"
+        "expense date"
+        "save save";
+    justify-items: center;
+    margin-top: 50px;
+}
+.name {
+    grid-area: name;
+}
+.expense {
+    grid-area: expense;
+}
+.date {
+    grid-area: date;
+}
+.expense, .date {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.422);
+    width: 200px;
+    text-align: center;
+    padding: 10px 5px;
+    margin-top: 30px;
+}
+.name, .income{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-bottom: white 1px solid;
+    width: 200px;
+}
+input[type="name"]::placeholder input[type="number"]::placeholder {
+    color: white;
+}
+.income {
+    grid-area: income;
+}
+.save {
+    grid-area: save;
+    justify-self: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #14202E;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.save:hover {
+    background-color: #1F76DE;
+    color: white;
+    cursor: pointer;
+}

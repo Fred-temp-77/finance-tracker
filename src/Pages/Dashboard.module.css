@@ -1,0 +1,36 @@
+.header2 {
+    display: flex;
+    padding: 30px 0px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+}
+.title {
+    width: 25%;
+    align-self: center;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: 'qumpellkano12regular';
+}
+.head {
+    align-self:flex-start;
+}
+
+
+/* Body 1 */
+.main1 {
+    margin-top: 150px;
+    width: 100dvw;
+    display: flex;
+}
+.sides1 {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

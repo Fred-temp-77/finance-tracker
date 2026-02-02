@@ -1,0 +1,30 @@
+.header {
+    background: linear-gradient( 180deg, #1F76DE 10%, #294A71);
+    min-height: 50px;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.button {
+    padding: 5px 30px;
+    margin: 10px 0px;
+    background-color: rgba(0, 0, 0, 0.453);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.button > p {
+    text-align: center;
+    font-size: 12px;
+}
+.button > h4 {
+    text-align: center;
+}
+.expense:hover {
+    background-color: rgba(255, 255, 255, 0.425);
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
