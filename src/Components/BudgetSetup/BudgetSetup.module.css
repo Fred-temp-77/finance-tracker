@@ -11,22 +11,14 @@
 .container2 {
     display: grid;
     grid-template-areas: 
-        "name income"
-        "expense date"
-        "save save";
+        "expense"
+        "income"
+        "save";
     justify-items: center;
     margin-top: 50px;
 }
-.name {
-    grid-area: name;
-}
 .expense {
     grid-area: expense;
-}
-.date {
-    grid-area: date;
-}
-.expense, .date {
     font-size: 20px;
     font-weight: 400;
     color: white;
@@ -34,20 +26,19 @@
     width: 200px;
     text-align: center;
     padding: 10px 7px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
-.name, .income{
+.income{
+    grid-area: income;
     font-size: 20px;
     font-weight: 300;
     color: white;
     border-bottom: white 1px solid;
     width: 200px;
+    margin-top: 25px;
 }
 input[type="name"]::placeholder input[type="number"]::placeholder {
     color: white;
-}
-.income {
-    grid-area: income;
 }
 .save {
     grid-area: save;

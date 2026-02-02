@@ -1,11 +1,14 @@
 const getCategoryTotals = (expenses) => {
-  return expenses.reduce((totals, expense) => {
-    const { category, amount } = expense;
-
-    totals[category] = (totals[category] || 0) + amount;
-
-    return totals;
+  const totals = expenses.reduce((acc, expense) => {
+    acc[expense.category] =
+      (acc[expense.category] || 0) + expense.amount;
+    return acc;
   }, {});
+
+  return Object.entries(totals).map(([category, amount]) => ({
+    name: category,
+    value: amount,
+  }));
 };
 
 export default getCategoryTotals;

@@ -5,45 +5,25 @@
     border: #1F76DE 2px solid;
     border-radius: 30px;
 }
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
 .container > h2 {
     font-family: 'qumpellkano12regular';
 }
-.container2 {
-    display: grid;
-    grid-template-areas: 
-        "name income"
-        "expense date"
-        "save save";
-    justify-items: center;
-    margin-top: 50px;
-}
-.name {
-    grid-area: name;
-}
-.expense {
-    grid-area: expense;
-}
-.date {
-    grid-area: date;
-}
-.expense, .date {
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.422);
-    width: 200px;
-    text-align: center;
-    padding: 10px 7px;
-    margin-top: 30px;
-}
-.name, .income{
+.income{
     font-size: 20px;
     font-weight: 300;
+    text-align: center;
     color: white;
     border-bottom: white 1px solid;
     width: 200px;
 }
-input[type="name"]::placeholder input[type="number"]::placeholder {
+input[type="number"]::placeholder {
     color: white;
 }
 .income {

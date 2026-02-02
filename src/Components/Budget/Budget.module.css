@@ -1,10 +1,18 @@
-.header {
+.card {
     background: linear-gradient( 180deg, #1F76DE 10%, #294A71);
-    min-height: 50px;
-    width: 1000px;
-    border-radius: 10px;
+    padding: 10px;
 }
 
+.card2 {
+    background-color: rgba(0, 0, 0, 0.453);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.card2 > h3 {
+    margin-top: 10px;
+}
 .button {
     padding: 5px 30px;
     margin: 10px 0px;
@@ -24,17 +32,7 @@
     background-color: rgba(255, 255, 255, 0.425);
     cursor: pointer;
 }
-a {
-    text-decoration: none;
-    color: white;
-}
-
 .modalBackground {
     background-color: rgba(0, 0, 0, 0.7);
-    /* width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10001; */
+    z-index: 1001;
 }

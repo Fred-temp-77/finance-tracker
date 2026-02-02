@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Header from '../Components/Header/Header'
 import Card from '../Components/ProfileCard/Card'
-import TransactHist from '../Components/TransactHist1/TransactHist'
 import TransactHist2 from '../Components/TransactHist2/TransactHist2'
+import ExpenseChart from '../Components/ExpenseChart/ExpenseChart'
+import Budget from '../Components/Budget/Budget'
 import { Link } from 'react-router-dom';
 import styles from './Dashboard.module.css'
 
@@ -32,23 +33,17 @@ const Dashboard = () => {
             {/* Sides */}
             <div className={styles.sides1}>
                 <Card />
-                <TransactHist />
+                {/* <TransactHist /> */}
             </div>
             {/* Chart */}
-            <div className={styles.chart1}>
-                Chart goes here
-            </div>
-        </div>
-
-        {/* Body 2 */}
-        <div>
-            {/* Sides */}
-            <div>
-                <TransactHist2 expenses={expenses} />
-            </div>
-            {/* Chart */}
-            <div>
-                Chart goes here
+            <div className={styles.otherside}>
+                <div className={styles.chart1}>
+                    <ExpenseChart expenses={expenses} />
+                    <TransactHist2 expenses={expenses} />
+                </div>
+                <div className={styles.budget}>
+                    <Budget expenses={expenses} />
+                </div>
             </div>
         </div>
     </div>

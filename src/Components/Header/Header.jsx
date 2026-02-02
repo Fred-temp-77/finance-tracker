@@ -6,6 +6,7 @@ import NewTransact from '../NewTransact/NewTransact';
 import ExpenseCalc from '../../Functions/ExpenseCalc';
 import ExpenseCount from '../../Functions/ExpenseCount';
 import BalanceCalc from '../../Functions/BalanceCalc';
+import UpdateIncome from '../UpdateIncome/UpdateIncome';
 
 const Header = () => {
     const [expenses, setExpenses] = useState(() => {
@@ -15,6 +16,14 @@ const Header = () => {
     useEffect(() => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
     }, [expenses]);
+
+    const [showUpdateIncome, setShowUpdateIncome] = useState(false);
+    const handleUpdateIncomeShow = () => {
+        setShowUpdateIncome(true);
+    };
+    const handleUpdateIncomeClose = () => {
+        setShowUpdateIncome(false);
+    };
 
 
     const [showModal, setShowModal] = useState(false);
@@ -37,8 +46,8 @@ const Header = () => {
   return (
     <div>
     <div className={`${styles.header} flex justify-evenly bg-[#1e293b]`}>
-        <button className={`${styles.button}`} onClick=''>
-            <h4>{income}</h4>
+        <button className={`${styles.button} ${styles.expense}`} onClick={handleUpdateIncomeShow}>
+            <h4>₦{income}</h4>
             <p>Monthly Income</p>
         </button>
         <button className={`${styles.button} ${styles.expense}`} onClick={handleNewTransactShow}>
@@ -49,16 +58,23 @@ const Header = () => {
             <h4><BalanceCalc expenses={expenses} income={income} /></h4>
             <p>Balance</p>
         </div>
-        <Link className={`${styles.button}`} to='/transactions'>
+        <div className={`${styles.button}`}>
             <h4><ExpenseCount expenses={expenses} /></h4>
             <p>Transactions</p>
-        </Link>
+        </div>
     </div>
+    
         {showModal && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+            <div className={`fixed inset-0 ${styles.modalBackground} flex flex-col items-center justify-center`}>
                 <p onClick={handleNewTransactClose} className="text-white cursor-pointer">Close</p>
                 <NewTransact setExpenses={setExpenses} />
             </div>)}
+
+        {showUpdateIncome && (
+        <div className={`fixed inset-0 ${styles.modalBackground} flex flex-col items-center justify-center`}>
+            <p onClick={handleUpdateIncomeClose} className="text-white cursor-pointer">Close</p>
+            <UpdateIncome setIncome={setIncome} />
+        </div>)}
     </div>
   )
 }
